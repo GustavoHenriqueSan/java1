@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Atividade 02</title>
+        <meta charset="utf-8">
+        
+        <script>
+            function cadastrar(){
+                var nome = document.getElementById("nome").value;
+                var sobrenome = document.getElementById("sobrenome").value;
+                var Endereço = document.getElementById("Endereço").value;
+                var cpf = document.getElementById("CPF").value;
+
+
+                var div = document.getElementById("resp");
+
+                div.innerHTML = `<h2> ${nome} ${sobrenome} ${Endereço} ${cpf} foi cadastrado! <h2>`;
+                div.style.display = "block";
+            }
+        </script>
+
+        <style>
+            #resp{
+                display: none;
+                padding: 2px;
+                margin: 5px;
+                background-color: #5fa072;
+                width: max-content;
+                border-radius: 5px;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="resp"></div>
+
+        <label><h1>Faça o seu cadastro :</h1></label> <p>
+
+        <label>Nome: </label>
+        <input type="text" id="nome">
+           <p>
+        <label>Sobrenome</label>
+        <input type="text" id="sobrenome">
+           <p>
+        <label>Endereço</label>
+        <input type="text" id="Endereço">
+           <p>
+        <label>CPF</label>
+        <input type="text" id="cpf">
+
+        
+        <p>
+        <button onclick="cadastrar()">Cadastrar</button>
+        
+    </body>
+
+</html>
